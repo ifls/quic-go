@@ -164,6 +164,7 @@ func listenAddr(addr string, tlsConf *tls.Config, config *Config, acceptEarly bo
 // tls.Config.CipherSuites allows setting of TLS 1.3 cipher suites. Furthermore,
 // it must define an application control (using NextProtos). The quic.Config may
 // be nil, in that case the default values will be used.
+// 监听
 func Listen(conn net.PacketConn, tlsConf *tls.Config, config *Config) (Listener, error) {
 	return listen(conn, tlsConf, config, false)
 }
